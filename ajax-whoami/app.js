@@ -38,11 +38,18 @@ form.addEventListener('submit', (e)=> {
     let response = xhr.responseText
     let data = JSON.parse(response) // fiind un string, trebuie sa il decodam in asa mod < -
     /* console.log(response) */ 
-    console.log(data)
-    let nationality = data.country[0].country_id
+    /* console.log(data) */
+    /* let nationality = data.country[0].country_id
     console.log(nationality)
 
-    output.innerHTML = `You are most probably from <strong> ${nationality} </strong>`
+    output.innerHTML = `You are most probably from <strong> ${nationality} </strong>` */
+    
+    if (data.country.some((c) => !c.country_id)) {
+    output.innerHTML = "No nationality information available!";
+  } else {
+    let nationality = data.country[0].country_id;
+    output.innerHTML = `You are most probably from <strong>${nationality}</strong>`;
+  }
   }
   
   //week8 video 501 - 1h6min explicatie la denumirea xhr
