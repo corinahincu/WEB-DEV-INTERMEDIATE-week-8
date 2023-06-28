@@ -26,10 +26,11 @@ form.addEventListener('submit', (e)=> {
     output.innerHTML = 'Please enter a valid name';
     return; // se opreste executia
   }
-  // HW2 : check when empty response and show a corresponding message
+
   console.log(name)
   
   // AJAX
+  // HW2 : check when empty response and show a corresponding message
   const xhr = new XMLHttpRequest()
   xhr.open("GET",`https://api.nationalize.io/?name=${name}` )
   xhr.send()
@@ -43,7 +44,7 @@ form.addEventListener('submit', (e)=> {
     console.log(nationality)
 
     output.innerHTML = `You are most probably from <strong> ${nationality} </strong>` */
-    
+
     if (data.country.some((c) => !c.country_id)) {
     output.innerHTML = "No nationality information available!";
   } else {
