@@ -1,0 +1,69 @@
+<!-- 
+  working with WEB data APIs
+  -----------------------------
+  GUESS NATIONALITY BASED ON THE NAME | APP
+
+  HTML:
+    - forms
+    - id
+
+  CSS :
+    - colors 
+    - blocks
+    - box model
+
+  JS :
+    - json
+    - dom
+    - fetch \ ajax
+    
+
+    [ FRON \ WEB APP]                                           [ BACK \ APP]
+    (html, css, js)                                       ( PHP, JAVA, PYTHON, JS, SQL)
+    
+                                      fetch / ajax 
+                                            v
+      client logic        < -------- requested / res ---------- > server logic ( public APIs - > public programming interfacing )
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS APP | Guessing NATIONALITY </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="form-name">
+    <h1> This app tells you where are you from</h1>
+    <h2>To do that, input your name bellow and hit ENTER</h2>
+
+    <label>
+      <input 
+      type="text"
+      placeholder="your name here..."
+      autofocus
+      >
+      <!-- in DOM - > Browser observes ^ this input 
+                            |
+                            addEventListener ( 'keydown, ', default)
+
+                            function default(){
+                              if(event.code == 'Enter'){
+                                // 1. get form data
+                                // 2. send it over network
+                                // 3. emit event 'submit'
+                              }
+                            }
+                  
+      -->
+    </label>
+    <div class="output">
+      <!-- you are moldavian -->
+    </div>
+  </form>
+
+<script src="app.js"></script>
+</body>
+</html>
