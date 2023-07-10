@@ -1,0 +1,53 @@
+<!-- 
+  WEATHER APP
+
+    - DOM manipulations
+    - DOM events
+    - APIs (aplication programming interface)
+    - JSON
+    - HTTP
+    - AJAX (Asynchronous JavaScript and XML) - set de biblioteci care ruleaza in browser, care permit prin js sa trimiti request-uri, sa setezi metoda, sa imbraci in acesti parametri, body, head-ul,sa obtii raspuns intr-un anumit format cu care sa faci ceva.
+    - Immutability
+    - Storage
+    - Optimization
+    - callbacks
+    - hof - functii de nivel inalt = higher order function
+    - geolocation
+
+    * api - abordarea/tehnica care permite sa iei un careva motor existent si sa dai acces programatic acestui motor, adica prin functii printr-o careva interfata sa permiti scriptului aplicatiei sa comunice cu careva mecanism care poate fi chiar ascuns.
+    * api keys- notiunea de key e ca un password, care permite unui sistem sa se autentifice automat in alt sistem, va permite aplicatiei noastre front in cazul exemplului dat, sa se logheze ca sa obtina niste date
+
+    * end points - punct de acces. Platforma openweather au mai multe end points, unde te adresezi, la care sectiune te adresezi ca sa primesti informatia dorita, end point-urile se vor deosebi prin adresa. Ele pot trimite date in format json, xml, html
+
+    * comunicarea prin request se utilizeaza cu http 
+
+    * Trebuie sa fim atenti la parametri: adica la formulele care merg dupa semnul intrebarii, variabila egal valoare (q=city name) permit sa gestionezi datele, ce vrei sa obtii si cum vrei sa obtii
+      exemplu :
+      - https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
+
+        - parametrul q= city name, vom putea cere datele de la un anumit oras.
+        - punind cheia, (API key), vom avea acces la datele respective
+
+      * cod 401 - > in http inseamna unauthorized
+      * cod 404 - > in http inseamna not found
+
+      - cand dorim sa accesam datele prin browser , primim raspuns un text, string, ce nu e comod de citit, in asa caz, apasam F12, ne ducem in network, dam click pe parametrul dorit in name, si in preview, vedem ca obiect, decodat parse. (video 503 minuta 30)
+
+      * units putem sa le schimbam noi, cum e mai comod pentru noi in api key.
+      
+      * un tool important - > postman : permite (v503.35-45min)
+          
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API weather demo app</title>
+</head>
+<body>
+  <h1>API weather demo app</h1>
+  <script src="main.js"></script>
+</body>
+</html>
