@@ -30,6 +30,7 @@ const render = (data) =>{
   console.log(data)
 }
 
+loadData(render)
 
 
 /* 
@@ -53,4 +54,11 @@ const render = (data) =>{
   
   cache-ul este realizat sub paternul proxy
   * browserul are 2 macanisme de local storage, le putem gasi in application
+  * storage cele mai importante :
+    - local storage 
+    - session storage 
+    - cookies
+  au in comun servesc pentru a face aplicatii mai bine optimizate, in special comunicarea cu back end, aplicatii mai user friendly, in alte cuvinte, ajuta aplicatia sa se adapteze dupa client 
+  local storage si session storage sunt disponibile direct din browser, doar js poate sa le acceseze, in schimb cookies poate fi accesat si din server, si din back end si front end, asta inseamna ca ele sunt mai vulnerabile.
+  cookies au mai putin storage.
  */
