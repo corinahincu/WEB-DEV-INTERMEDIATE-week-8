@@ -1,2 +1,2 @@
 # WEB-DEV-INTERMEDIATE-week-8
-js-advamced/ajax/fetch
+js-advanced/ajax/fetch
